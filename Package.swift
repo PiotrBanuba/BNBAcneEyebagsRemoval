@@ -13,10 +13,10 @@ let package = Package(
             name: "BNBAcneEyebagsRemoval",
             targets: [
                 "BNBAcneEyebagsRemoval",
-                "BNBAcneEyebagsRemovalBNBSdkCoreTarget",
-                "BNBAcneEyebagsRemovalBNBEffectPlayerTarget",
-                "BNBAcneEyebagsRemovalBNBScriptingTarget",
-                "BNBAcneEyebagsRemovalBNBFaceTrackerTarget"
+                "BNBAcneEyebagsRemovalBNBSdkCore",
+                "BNBAcneEyebagsRemovalBNBEffectPlayer",
+                "BNBAcneEyebagsRemovalBNBScripting",
+                "BNBAcneEyebagsRemovalBNBFaceTracker"
             ]
         ),
     ],
@@ -45,7 +45,7 @@ let package = Package(
             checksum: "0559658787637a1e42b41e1927468faabe06f62fc10fe51e5cf7b09f21d21f09"
         ),
         .target(
-            name: "BNBAcneEyebagsRemovalBNBSdkCoreTarget",
+            name: "BNBAcneEyebagsRemovalBNBSdkCore",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -54,7 +54,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBAcneEyebagsRemovalBNBEffectPlayerTarget",
+            name: "BNBAcneEyebagsRemovalBNBEffectPlayer",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -63,7 +63,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBAcneEyebagsRemovalBNBScriptingTarget",
+            name: "BNBAcneEyebagsRemovalBNBScripting",
             dependencies: [
                 .product(
                     name: "BNBScripting",
@@ -72,7 +72,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBAcneEyebagsRemovalBNBFaceTrackerTarget",
+            name: "BNBAcneEyebagsRemovalBNBFaceTracker",
             dependencies: [
                 .product(
                     name: "BNBFaceTracker",
