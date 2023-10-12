@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-6"
+let bnbPackageVersion: Version = "1.8.0-7"
 
 let package = Package(
     name: "BNBAcneEyebagsRemoval",
@@ -12,11 +12,11 @@ let package = Package(
         .library(
             name: "BNBAcneEyebagsRemoval",
             targets: [
-                "BNBAcneEyebagsRemoval",
-                "BNBSdkCore",
-                "BNBEffectPlayer",
-                "BNBScripting",
-                "BNBFaceTracker"
+                "BNBAcneEyebagsRemovalBNBAcneEyebagsRemovalTarget",
+                "BNBAcneEyebagsRemovalBNBSdkCoreTarget",
+                "BNBAcneEyebagsRemovalBNBEffectPlayerTarget",
+                "BNBAcneEyebagsRemovalBNBScriptingTarget",
+                "BNBAcneEyebagsRemovalBNBFaceTrackerTarget"
             ]
         ),
     ],
@@ -45,7 +45,7 @@ let package = Package(
             checksum: "0559658787637a1e42b41e1927468faabe06f62fc10fe51e5cf7b09f21d21f09"
         ),
         .target(
-            name: "BNBSdkCore",
+            name: "BNBAcneEyebagsRemovalBNBSdkCoreTarget",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -54,7 +54,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBEffectPlayer",
+            name: "BNBAcneEyebagsRemovalBNBEffectPlayerTarget",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -63,7 +63,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBScripting",
+            name: "BNBAcneEyebagsRemovalBNBScriptingTarget",
             dependencies: [
                 .product(
                     name: "BNBScripting",
@@ -72,7 +72,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBFaceTracker",
+            name: "BNBAcneEyebagsRemovalBNBFaceTrackerTarget",
             dependencies: [
                 .product(
                     name: "BNBFaceTracker",
