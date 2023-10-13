@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-11"
+let bnbPackageVersion: Version = "1.8.0-13"
 
 let package = Package(
     name: "BNBAcneEyebagsRemoval",
@@ -12,11 +12,11 @@ let package = Package(
         .library(
             name: "BNBAcneEyebagsRemoval",
             targets: [
-                "BNBAcneEyebagsRemoval",
-                "BNBSdkCore",
-                "BNBEffectPlayer",
-                "BNBScripting",
-                "BNBFaceTracker"
+                "BNBAcneEyebagsRemoval_Target",
+                "BNBAcneEyebagsRemoval_BNBAcneEyebagsRemoval_Target",
+                "BNBAcneEyebagsRemoval_BNBAcneEyebagsRemoval_Target",
+                "BNBAcneEyebagsRemoval_BNBAcneEyebagsRemoval_Target",
+                "BNBAcneEyebagsRemoval_BNBAcneEyebagsRemoval_Target"
             ]
         ),
     ],
@@ -40,9 +40,45 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "BNBAcneEyebagsRemoval",
+            name: "BNBAcneEyebagsRemoval_Target",
             url: "https://d2cm7wtcqqw29.cloudfront.net/1.8.0-58-g46079e7d74/BNBAcneEyebagsRemoval.zip",
             checksum: "0559658787637a1e42b41e1927468faabe06f62fc10fe51e5cf7b09f21d21f09"
+        ),
+        .target(
+            name: "BNBAcneEyebagsRemoval_BNBSdkCore_Target",
+            dependencies: [
+                .product(
+                    name: "BNBSdkCore",
+                    package: "BNBSdkCore"
+                ),
+            ]
+        ),
+        .target(
+            name: "BNBAcneEyebagsRemoval_BNBEffectPlayer_Target",
+            dependencies: [
+                .product(
+                    name: "BNBEffectPlayer",
+                    package: "BNBEffectPlayer"
+                ),
+            ]
+        ),
+        .target(
+            name: "BNBAcneEyebagsRemoval_BNBScripting_Target",
+            dependencies: [
+                .product(
+                    name: "BNBScripting",
+                    package: "BNBScripting"
+                ),
+            ]
+        ),
+        .target(
+            name: "BNBAcneEyebagsRemoval_BNBFaceTracker_Target",
+            dependencies: [
+                .product(
+                    name: "BNBFaceTracker",
+                    package: "BNBFaceTracker"
+                ),
+            ]
         ),
     ]
 )
