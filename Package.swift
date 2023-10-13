@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-13"
+let bnbPackageVersion: Version = "1.8.0-14"
 
 let package = Package(
     name: "BNBAcneEyebagsRemoval",
@@ -13,10 +13,10 @@ let package = Package(
             name: "BNBAcneEyebagsRemoval",
             targets: [
                 "BNBAcneEyebagsRemoval_Target",
-                "BNBAcneEyebagsRemoval_BNBAcneEyebagsRemoval_Target",
-                "BNBAcneEyebagsRemoval_BNBAcneEyebagsRemoval_Target",
-                "BNBAcneEyebagsRemoval_BNBAcneEyebagsRemoval_Target",
-                "BNBAcneEyebagsRemoval_BNBAcneEyebagsRemoval_Target"
+                "BNBAcneEyebagsRemoval_BNBSdkCore_Target",
+                "BNBAcneEyebagsRemoval_BNBEffectPlayer_Target",
+                "BNBAcneEyebagsRemoval_BNBScripting_Target",
+                "BNBAcneEyebagsRemoval_BNBFaceTracker_Target"
             ]
         ),
     ],
