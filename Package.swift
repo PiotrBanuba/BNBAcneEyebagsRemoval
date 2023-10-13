@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-14"
+let bnbPackageVersion: Version = "1.8.0-15"
 
 let package = Package(
     name: "BNBAcneEyebagsRemoval",
@@ -12,11 +12,11 @@ let package = Package(
         .library(
             name: "BNBAcneEyebagsRemoval",
             targets: [
-                "BNBAcneEyebagsRemoval_Target",
-                "BNBAcneEyebagsRemoval_BNBSdkCore_Target",
-                "BNBAcneEyebagsRemoval_BNBEffectPlayer_Target",
-                "BNBAcneEyebagsRemoval_BNBScripting_Target",
-                "BNBAcneEyebagsRemoval_BNBFaceTracker_Target"
+                "BNBAcneEyebagsRemoval",
+                "BNBAcneEyebagsRemoval_BNBSdkCore",
+                "BNBAcneEyebagsRemoval_BNBEffectPlayer",
+                "BNBAcneEyebagsRemoval_BNBScripting",
+                "BNBAcneEyebagsRemoval_BNBFaceTracker"
             ]
         ),
     ],
@@ -40,12 +40,12 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "BNBAcneEyebagsRemoval_Target",
+            name: "BNBAcneEyebagsRemoval",
             url: "https://d2cm7wtcqqw29.cloudfront.net/1.8.0-58-g46079e7d74/BNBAcneEyebagsRemoval.zip",
             checksum: "0559658787637a1e42b41e1927468faabe06f62fc10fe51e5cf7b09f21d21f09"
         ),
         .target(
-            name: "BNBAcneEyebagsRemoval_BNBSdkCore_Target",
+            name: "BNBAcneEyebagsRemovalBNBSdkCore",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -54,7 +54,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBAcneEyebagsRemoval_BNBEffectPlayer_Target",
+            name: "BNBAcneEyebagsRemovalBNBEffectPlayer",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -63,7 +63,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBAcneEyebagsRemoval_BNBScripting_Target",
+            name: "BNBAcneEyebagsRemovalBNBScripting",
             dependencies: [
                 .product(
                     name: "BNBScripting",
@@ -72,7 +72,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBAcneEyebagsRemoval_BNBFaceTracker_Target",
+            name: "BNBAcneEyebagsRemovalBNBFaceTracker",
             dependencies: [
                 .product(
                     name: "BNBFaceTracker",
